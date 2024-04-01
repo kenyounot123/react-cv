@@ -1,7 +1,7 @@
 import FormField from "./FormField";
 export default function InfoForm() {
   return (
-    <div className="form-info-container">
+    <div className="form-info-container container">
       <h3 className="form-info-title"> General Information </h3>
       <form className="form-info-section">
         <FormField id="firstName" labelName={"First Name"} />
