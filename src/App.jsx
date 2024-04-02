@@ -9,8 +9,8 @@ function App() {
     <>
       <Header />
       <InfoForm />
-      <MoreFields title="Educational Experience" />
-      <MoreFields title="Work Experience" />
+      <MoreFields title="Educational" />
+      <MoreFields title="Work" />
       <SubmitBtn />
     </>
   );
