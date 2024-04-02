@@ -1,6 +1,6 @@
 export default function InfoForm() {
   return (
-    <div className="form-info-container container">
+    <div className="form-info-container form-card container">
       <h3 className="form-info-title"> General Information </h3>
       <form className="form-info-section">
         <label className="input-field-labels" htmlFor="firstName">

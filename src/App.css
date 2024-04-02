@@ -23,7 +23,6 @@
 }
 
 .form-info-title {
-  margin: 1em 0;
   font-size: 1.3rem;
 }
 .form-info-section {
@@ -37,6 +36,7 @@
   outline: none;
   text-indent: 10px;
   background-color: var(--input-field-color);
+  font-size: 1.2rem;
 }
 .input-field:focus {
   box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
@@ -91,6 +91,6 @@
 }
 .form-card {
   border-radius: 15px;
-  padding: 1em;
+  padding: 1.5em;
   background-color: var(--card-color);
 }

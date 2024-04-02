@@ -14,21 +14,17 @@ export default function NewFormSection({ formFor }) {
           <label className="input-field-labels" htmlFor="startDate">
             Start date
           </label>
-          <input className="input-field" type="date" id="startDate" />
+          <input className="input-field" type="month" id="startDate" />
 
           <label className="input-field-labels" htmlFor="endDate">
             End date
           </label>
-          <input className="input-field" type="date" id="endDate" />
+          <input className="input-field" type="month" id="endDate" />
 
           <label className="input-field-labels" htmlFor="responsibilities">
             Responsibilities
           </label>
-          <textarea
-            rows="5"
-            className="input-field"
-            id="responsibilities"
-          ></textarea>
+          <textarea className="input-field" id="responsibilities"></textarea>
         </form>
       )}
       {formFor === "Work" && (
@@ -46,12 +42,12 @@ export default function NewFormSection({ formFor }) {
           <label className="input-field-labels" htmlFor="startDate">
             Start date
           </label>
-          <input className="input-field" type="date" id="startDate" />
+          <input className="input-field" type="month" id="startDate" />
 
           <label className="input-field-labels" htmlFor="endDate">
             End date
           </label>
-          <input className="input-field" type="date" id="endDate" />
+          <input className="input-field" type="month" id="endDate" />
         </form>
       )}
       <DeleteSectionBtn />
