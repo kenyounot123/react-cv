@@ -4,7 +4,7 @@ import DeleteSectionBtn from "./DeleteSectionBtn";
 export default function NewFormSection({ formFor, onDelete }) {
   return (
     <div className="form-card container">
-      {formFor === "Educational" && (
+      {formFor === "Work" && (
         <form>
           <label className="input-field-labels" htmlFor="companyName">
             Company Name
@@ -27,7 +27,7 @@ export default function NewFormSection({ formFor, onDelete }) {
           <textarea className="input-field" id="responsibilities"></textarea>
         </form>
       )}
-      {formFor === "Work" && (
+      {formFor === "Educational" && (
         <form>
           <label className="input-field-labels" htmlFor="study">
             Study
