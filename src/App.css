@@ -1,6 +1,7 @@
 :root {
   --main-background-color: #fbebeb;
-  --input-field-color: #f4ecec;
+  --input-field-color: #faf8f8;
+  --card-color: rgb(189, 152, 152);
 }
 * {
   box-sizing: border-box;
@@ -23,6 +24,7 @@
 
 .form-info-title {
   margin: 1em 0;
+  font-size: 1.3rem;
 }
 .form-info-section {
   text-align: center;
@@ -35,6 +37,9 @@
   outline: none;
   text-indent: 10px;
   background-color: var(--input-field-color);
+}
+.input-field:focus {
+  box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .input-field-labels {
   display: block;
@@ -71,7 +76,7 @@
   text-align: center;
   width: 100%;
   padding: 1em 2em;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border: none;
 }
 .submit-btn:hover {
@@ -79,4 +84,13 @@
 }
 .submit-btn:active {
   transform: translateY(1px);
+}
+#responsibilities {
+  width: 100%;
+  min-height: 100px;
+}
+.form-card {
+  border-radius: 15px;
+  padding: 1em;
+  background-color: var(--card-color);
 }

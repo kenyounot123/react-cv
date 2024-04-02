@@ -3,35 +3,51 @@ import DeleteSectionBtn from "./DeleteSectionBtn";
 
 export default function NewFormSection({ formFor }) {
   return (
-    <div>
+    <div className="form-card container">
       {formFor === "Educational" && (
         <form>
-          <label htmlFor="companyName">Company Name</label>
-          <input id="companyName" type="text" />
+          <label className="input-field-labels" htmlFor="companyName">
+            Company Name
+          </label>
+          <input className="input-field" id="companyName" type="text" />
 
-          <label htmlFor="startDate">Start date</label>
-          <input type="date" id="startDate" />
+          <label className="input-field-labels" htmlFor="startDate">
+            Start date
+          </label>
+          <input className="input-field" type="date" id="startDate" />
 
-          <label htmlFor="endDate">End date</label>
-          <input type="date" id="endDate" />
+          <label className="input-field-labels" htmlFor="endDate">
+            End date
+          </label>
+          <input className="input-field" type="date" id="endDate" />
 
-          <label htmlFor="responsibilities">Responsibilities</label>
-          <input type="textarea" id="responsibilities" />
+          <label className="input-field-labels" htmlFor="responsibilities">
+            Responsibilities
+          </label>
+          <textarea className="input-field" id="responsibilities"></textarea>
         </form>
       )}
       {formFor === "Work" && (
         <form>
-          <label htmlFor="study">Study</label>
-          <input id="study" type="text" />
+          <label className="input-field-labels" htmlFor="study">
+            Study
+          </label>
+          <input className="input-field" id="study" type="text" />
 
-          <label htmlFor="schoolName">School</label>
-          <input id="schoolName" type="text" />
+          <label className="input-field-labels" htmlFor="schoolName">
+            School
+          </label>
+          <input className="input-field" id="schoolName" type="text" />
 
-          <label htmlFor="startDate">Start date</label>
-          <input type="date" id="startDate" />
+          <label className="input-field-labels" htmlFor="startDate">
+            Start date
+          </label>
+          <input className="input-field" type="date" id="startDate" />
 
-          <label htmlFor="endDate">End date</label>
-          <input type="date" id="endDate" />
+          <label className="input-field-labels" htmlFor="endDate">
+            End date
+          </label>
+          <input className="input-field" type="date" id="endDate" />
         </form>
       )}
       <DeleteSectionBtn />
