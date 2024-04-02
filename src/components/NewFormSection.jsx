@@ -24,7 +24,11 @@ export default function NewFormSection({ formFor }) {
           <label className="input-field-labels" htmlFor="responsibilities">
             Responsibilities
           </label>
-          <textarea className="input-field" id="responsibilities"></textarea>
+          <textarea
+            rows="5"
+            className="input-field"
+            id="responsibilities"
+          ></textarea>
         </form>
       )}
       {formFor === "Work" && (

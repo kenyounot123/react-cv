@@ -9,17 +9,24 @@ function AddSectionButton({ onClick }) {
   );
 }
 export default function MoreFields({ title }) {
-  const [showSections, setShowSections] = useState(false);
+  const [formSections, setFormSections] = useState([]);
+
   function handleClick() {
-    setShowSections(true);
+    setFormSections([
+      ...formSections,
+      { id: setFormSections.length + 1, formFor: title },
+    ]);
   }
   return (
     <div className="more-section-container container">
       <h2 className="section-title">{title} Experience</h2>
-      {showSections && title === "Educational" && (
-        <NewFormSection formFor="Educational" />
+      {formSections.map((section) =>
+        title === "Educational" ? (
+          <NewFormSection key={section.id} formFor="Educational" />
+        ) : (
+          <NewFormSection key={section.id} formFor="Work" />
+        )
       )}
-      {showSections && title === "Work" && <NewFormSection formFor="Work" />}
       <AddSectionButton onClick={handleClick} />
     </div>
   );
