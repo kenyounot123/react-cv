@@ -65,12 +65,7 @@
   border-bottom-right-radius: 12px;
   transition: background-color 0.3s;
 }
-.section-add-btn:hover {
-  background-color: #ccc;
-}
-.section-add-btn:active {
-  transform: translateY(1px);
-}
+
 .submit-btn {
   margin-top: 30px;
   text-align: center;
@@ -79,10 +74,13 @@
   font-size: 1.3rem;
   border: none;
 }
-.submit-btn:hover {
+.submit-btn:hover,
+.section-add-btn:hover {
   background-color: #ccc;
 }
-.submit-btn:active {
+.submit-btn:active,
+.section-add-btn:active,
+.delete-section-btn:active {
   transform: translateY(1px);
 }
 #responsibilities {
@@ -93,4 +91,15 @@
   border-radius: 15px;
   padding: 1.5em;
   background-color: var(--card-color);
+}
+.delete-section-btn {
+  color: white;
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(218, 82, 82);
+}
+.delete-section-btn:hover {
+  background-color: rgb(204, 22, 22);
 }
