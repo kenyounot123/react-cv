@@ -1,15 +1,5 @@
-import { useState } from "react";
-
-export default function InfoForm() {
-  const [generalInfo, setGeneralInfo] = useState({
-    firstName: "John",
-    lastName: "Wick",
-    phoneNumber: "(123)-123-123",
-    email: "johnwick69@gmail.com",
-  });
-  function handleChange(e) {
-    setGeneralInfo(e.target.value);
-  }
+/* eslint-disable react/prop-types*/
+export default function InfoForm({ defaultInfo, handleChange }) {
   return (
     <div className="form-info-container container">
       <h3 className="form-info-title"> General Information </h3>
@@ -18,8 +8,10 @@ export default function InfoForm() {
           First Name
         </label>
         <input
-          value={generalInfo.firstName}
-          onChange={handleChange}
+          value={defaultInfo.generalInfo.firstName}
+          onChange={(e) =>
+            handleChange("generalInfo", "firstName", e.target.value)
+          }
           id="firstName"
           className="input-field"
           type="text"
@@ -30,8 +22,10 @@ export default function InfoForm() {
         </label>
         <input
           required
-          value={generalInfo.lastName}
-          onChange={handleChange}
+          value={defaultInfo.generalInfo.lastName}
+          onChange={(e) =>
+            handleChange("generalInfo", "lastName", e.target.value)
+          }
           id="lastName"
           className="input-field"
           type="text"
@@ -41,8 +35,10 @@ export default function InfoForm() {
           Phone Number
         </label>
         <input
-          value={generalInfo.phoneNumber}
-          onChange={handleChange}
+          value={defaultInfo.generalInfo.phoneNumber}
+          onChange={(e) =>
+            handleChange("generalInfo", "phoneNumber", e.target.value)
+          }
           id="phoneNumber"
           className="input-field"
           type="text"
@@ -52,8 +48,8 @@ export default function InfoForm() {
           Email
         </label>
         <input
-          value={generalInfo.email}
-          onChange={handleChange}
+          value={defaultInfo.generalInfo.email}
+          onChange={(e) => handleChange("generalInfo", "email", e.target.value)}
           id="email"
           className="input-field"
           type="email"

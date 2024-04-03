@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
-import NewFormSection from "./NewFormSection";
+import { NewFormSection } from "./NewFormSection";
 function AddSectionButton({ onClick }) {
   return (
     <button className="section-add-btn" onClick={onClick}>
@@ -9,7 +9,7 @@ function AddSectionButton({ onClick }) {
     </button>
   );
 }
-export default function MoreFields({ title }) {
+function MoreFields({ title }) {
   const [formSections, setFormSections] = useState([]);
 
   function handleDelete(id) {
@@ -42,3 +42,4 @@ export default function MoreFields({ title }) {
     </div>
   );
 }
+export { MoreFields };

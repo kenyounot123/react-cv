@@ -1,5 +1,5 @@
 /*eslint-disable react/prop-types*/
-export default function SelectPage({ onForm, onView, currentPage }) {
+function SelectPage({ onForm, onView, currentPage }) {
   return (
     <div className="select-page-container">
       <button
@@ -17,3 +17,4 @@ export default function SelectPage({ onForm, onView, currentPage }) {
     </div>
   );
 }
+export { SelectPage };

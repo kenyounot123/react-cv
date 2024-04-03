@@ -37,8 +37,8 @@ body {
   border-bottom: 1px solid black;
 }
 .selected {
-  color: orange;
-  border-color: orange;
+  color: var(--main-background-color);
+  border-color: var(--main-background-color);
 }
 .form-page:hover,
 .view-page:hover {

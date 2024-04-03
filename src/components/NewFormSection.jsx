@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import DeleteSectionBtn from "./DeleteSectionBtn";
+import { DeleteSectionBtn } from "./DeleteSectionBtn";
 
-export default function NewFormSection({ formFor, onDelete }) {
+function NewFormSection({ formFor, onDelete }) {
   return (
     <div className="form-card container">
       {formFor === "Work" && (
@@ -54,3 +54,4 @@ export default function NewFormSection({ formFor, onDelete }) {
     </div>
   );
 }
+export { NewFormSection };
