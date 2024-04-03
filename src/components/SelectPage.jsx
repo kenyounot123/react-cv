@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 /*eslint-disable react/prop-types*/
 export default function SelectPage({ onForm, onView, currentPage }) {
   return (

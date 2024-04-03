@@ -100,11 +100,14 @@ body {
   transition: background-color 0.3s;
   background-color: var(--stand-out-color);
 }
-
+.submit-btn-container {
+  margin: 0 auto 10px;
+  width: 200px;
+}
 .submit-btn {
   text-align: center;
   width: 100%;
-  padding: 1em 2em;
+  padding: 1em;
   font-size: 1.3rem;
   color: white;
   border: none;
