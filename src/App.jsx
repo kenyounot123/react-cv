@@ -35,6 +35,8 @@ function App() {
   function handleViewClick() {
     setCurrentPage("View");
   }
+  function handleEditClick() {}
+  function handleSubmitClick() {}
 
   const handleInputChange = (key, field, value) => {
     setFormInfo({

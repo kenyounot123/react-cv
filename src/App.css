@@ -17,7 +17,6 @@ body {
 .container {
   width: 90%;
   margin: 20px auto;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
 }
 .select-page-container {
   display: flex;
@@ -55,6 +54,7 @@ body {
   border-radius: 15px;
   padding: 1.5em;
   background-color: var(--main-background-color);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
 }
 .form-info-title {
   font-size: 1.3rem;
@@ -81,6 +81,7 @@ body {
   margin-top: 10px;
 }
 .more-section-container {
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
   border-radius: 12px;
   background-color: var(--main-background-color);
 }
@@ -104,7 +105,8 @@ body {
   margin: 0 auto 10px;
   width: 200px;
 }
-.submit-btn {
+.submit-btn,
+.edit-btn {
   text-align: center;
   width: 100%;
   padding: 1em;
@@ -114,10 +116,12 @@ body {
   border-radius: 12px;
   background-color: var(--stand-out-color);
 }
+.edit-btn:hover,
 .submit-btn:hover,
 .section-add-btn:hover {
   background-color: #854967;
 }
+.edit-btn:hover,
 .submit-btn:active,
 .section-add-btn:active,
 .delete-section-btn:active {
@@ -131,6 +135,7 @@ body {
   border-radius: 15px;
   padding: 1.5em;
   background-color: var(--card-color);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
 }
 .delete-section-btn {
   color: white;
@@ -142,4 +147,12 @@ body {
 }
 .delete-section-btn:hover {
   background-color: rgb(204, 22, 22);
+}
+.view-section-title {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid black;
+}
+.edit-btn {
+  margin-top: 100px;
 }
