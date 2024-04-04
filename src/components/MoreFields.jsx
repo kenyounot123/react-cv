@@ -9,7 +9,7 @@ function AddSectionButton({ onClick }) {
     </button>
   );
 }
-function MoreFields({ title }) {
+function MoreFields({ title, handleChange }) {
   const [formSections, setFormSections] = useState([]);
 
   function handleDelete(id) {
@@ -26,12 +26,14 @@ function MoreFields({ title }) {
       {formSections.map((section) =>
         title === "Educational" ? (
           <NewFormSection
+            handleChange={handleChange}
             key={section.id}
             onDelete={() => handleDelete(section.id)}
             formFor="Educational"
           />
         ) : (
           <NewFormSection
+            handleChange={handleChange}
             key={section.id}
             onDelete={() => handleDelete(section.id)}
             formFor="Work"

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { DeleteSectionBtn } from "./DeleteSectionBtn";
 
-function NewFormSection({ formFor, onDelete }) {
+function NewFormSection({ formFor, onDelete, handleChange }) {
   return (
     <div className="form-card container">
       {formFor === "Work" && (
@@ -9,22 +9,49 @@ function NewFormSection({ formFor, onDelete }) {
           <label className="input-field-labels" htmlFor="companyName">
             Company Name
           </label>
-          <input className="input-field" id="companyName" type="text" />
+          <input
+            onChange={(e) =>
+              handleChange("workInfo", "companyName", e.target.value)
+            }
+            className="input-field"
+            id="companyName"
+            type="text"
+          />
 
           <label className="input-field-labels" htmlFor="startDate">
             Start date
           </label>
-          <input className="input-field" type="month" id="startDate" />
+          <input
+            onChange={(e) =>
+              handleChange("workInfo", "startDate", e.target.value)
+            }
+            className="input-field"
+            type="month"
+            id="startDate"
+          />
 
           <label className="input-field-labels" htmlFor="endDate">
             End date
           </label>
-          <input className="input-field" type="month" id="endDate" />
+          <input
+            onChange={(e) =>
+              handleChange("workInfo", "endDate", e.target.value)
+            }
+            className="input-field"
+            type="month"
+            id="endDate"
+          />
 
           <label className="input-field-labels" htmlFor="responsibilities">
             Responsibilities
           </label>
-          <textarea className="input-field" id="responsibilities"></textarea>
+          <textarea
+            onChange={(e) =>
+              handleChange("workInfo", "responsibilities", e.target.value)
+            }
+            className="input-field"
+            id="responsibilities"
+          ></textarea>
         </form>
       )}
       {formFor === "Educational" && (
@@ -32,22 +59,50 @@ function NewFormSection({ formFor, onDelete }) {
           <label className="input-field-labels" htmlFor="study">
             Study
           </label>
-          <input className="input-field" id="study" type="text" />
+          <input
+            onChange={(e) =>
+              handleChange("educationalInfo", "study", e.target.value)
+            }
+            className="input-field"
+            id="study"
+            type="text"
+          />
 
           <label className="input-field-labels" htmlFor="schoolName">
             School
           </label>
-          <input className="input-field" id="schoolName" type="text" />
+          <input
+            onChange={(e) =>
+              handleChange("educationalInfo", "school", e.target.value)
+            }
+            className="input-field"
+            id="schoolName"
+            type="text"
+          />
 
           <label className="input-field-labels" htmlFor="startDate">
             Start date
           </label>
-          <input className="input-field" type="month" id="startDate" />
+          <input
+            onChange={(e) =>
+              handleChange("educationalInfo", "startDate", e.target.value)
+            }
+            className="input-field"
+            type="month"
+            id="startDate"
+          />
 
           <label className="input-field-labels" htmlFor="endDate">
             End date
           </label>
-          <input className="input-field" type="month" id="endDate" />
+          <input
+            onChange={(e) =>
+              handleChange("educationalInfo", "endDate", e.target.value)
+            }
+            className="input-field"
+            type="month"
+            id="endDate"
+          />
         </form>
       )}
       <DeleteSectionBtn onClick={onDelete} />

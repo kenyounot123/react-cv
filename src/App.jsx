@@ -35,8 +35,6 @@ function App() {
   function handleViewClick() {
     setCurrentPage("View");
   }
-  function handleEditClick() {}
-  function handleSubmitClick() {}
 
   const handleInputChange = (key, field, value) => {
     setFormInfo({
@@ -59,14 +57,14 @@ function App() {
       {currentPage === "Form" && (
         <>
           <InfoForm defaultInfo={formInfo} handleChange={handleInputChange} />
-          <MoreFields title="Educational" />
-          <MoreFields title="Work" />
-          <SubmitBtn />
+          <MoreFields title="Educational" handleChange={handleInputChange} />
+          <MoreFields title="Work" handleChange={handleInputChange} />
+          <SubmitBtn onClick={handleViewClick} />
         </>
       )}
       {currentPage === "View" && (
         <>
-          <ViewCv info={formInfo} />
+          <ViewCv info={formInfo} onEdit={handleFormClick} />
         </>
       )}
     </>
