@@ -63,6 +63,7 @@ body {
   text-align: center;
 }
 .input-field {
+  position: relative;
   border: none;
   border-radius: 12px;
   width: 100%;
@@ -155,4 +156,22 @@ body {
 }
 .edit-btn {
   margin-top: 100px;
+}
+@media (min-width: 700px) {
+  .form-info-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .first-and-last-name,
+  .phone-and-email {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  .first-name-field,
+  .last-name-field,
+  .phone-field,
+  .email-field {
+    flex-grow: 1;
+  }
 }
